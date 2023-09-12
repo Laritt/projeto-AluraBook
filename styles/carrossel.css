@@ -1,0 +1,166 @@
+
+
+.carrossel_titulo{
+    color: var(--cor-laranja);
+    background-color: var(--cor-branco);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0 0.5em 0;
+
+}
+
+.swiper-slide img {
+width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+
+.swiper-pagination{
+    position: initial;
+    margin: 0.5em 0;
+
+}
+
+.container_card{
+    border-radius: 10px;
+    background: var(--cor-branco);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1em;
+    padding: 1em;
+}
+
+
+.card_descricao{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card_botao{
+    display: flex;
+    justify-content: space-between;
+}
+
+#coracao_botao{
+    display: none;
+}
+
+#coracao_botao:checked + label > svg{
+    animation: preencher; /* nome da animação é preencher*/
+    animation-duration: .5s ;
+    animation-fill-mode: forwards;
+}
+
+/* agora vamos dar as configuração essa animação preencher*/
+
+@keyframes preencher{
+    0%{
+        fill: transparent;
+    }
+    100% {
+        fill: royalblue;
+    }
+}
+
+.botoes{
+    display: flex;
+}
+
+.descricao_titulo{
+    font-weight: 700;
+    color: var(--cor-laranja);
+}
+
+.descricao_subtitulo{
+    font-weight: 700;
+    color: var(--azul_escuro);
+    font-size: 18px;
+    margin: 0.5em 0;
+
+}
+
+.descricao_texto{
+    font-size: 14px;
+    color: black;
+}
+
+.botao{
+    margin: 0 0.3em;
+}
+
+.botao_saiba-mais{
+    background-color: var(--cor-laranja);
+    font-weight: 700;
+    color: var(--cor-branco);
+
+    padding: 1em 2.2em;
+    text-decoration: none;
+
+}
+
+@media screen and (min-width:760px){
+    
+    .carrossel_titulo{
+    
+        font-size: 26px;
+        font-weight: 700;
+        padding: 1.5em 0 1em 0;
+    }
+
+    .swiper-pagination{
+        position: initial;
+        margin: 2em 0 3em 0;
+    
+    }
+
+    .swiper{
+        width: 65%;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: block;
+        top: 60%;
+    }
+
+    .swiper-slide{
+        padding: 0.3em;
+    }
+
+    .container_card{
+        width: 40%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container_filho_carrossel{
+        display: flex;
+        margin: 0 20vw 0 20vw;
+        align-items: center;
+    }
+
+    .swiper-pagination{
+        margin: 1em 0;
+    }
+
+    .swiper-wrapper{
+        width: 60%;
+    }
+
+
+    .container_card{
+        width: 50%;
+        margin-left: 3em;
+    }
+
+    .descricao{
+        margin-right: 1em;
+    }
+}
+

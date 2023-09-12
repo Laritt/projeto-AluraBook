@@ -1,0 +1,52 @@
+hr{
+    margin: 0;
+
+}
+
+.container_rodape{
+    background-color: var(--cor-branco);
+    padding: 1em;
+}
+
+.lista_categoria_rodape{
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+
+    .lista_categoria_rodape{
+        display: block;
+    }
+    
+    .container_rodape{
+         
+        padding: 2em 0;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .categoria_rodape{
+        color: var(--cor-cinza);
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 1em;
+    }
+
+    .item_categoria_rodape{
+        display: flex;
+        align-items: center;
+        margin: 1em 0 1em 0;
+    }
+
+    .link_item_categoria_rodape{
+        color: var(--cor-cinza-escuro);
+        text-decoration: none;
+        margin-left: 1em;
+
+    }
+    .rodape_titulo{
+        font-size: 24px;
+        padding: 0.5em 0 1em 0;
+    }
+}
